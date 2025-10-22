@@ -13,9 +13,13 @@ setInterval(() => {
     // }
 
 
+    // let date = new Date();
+    // let hours = String(date.getHours()).padStart(2, '0');
+    // let minutes = String(date.getMinutes()).padStart(2, '0');
+    // let seconds = String(date.getSeconds()).padStart(2, '0');
+    // clock.textContent = `${hours}:${minutes}:${seconds}`;
+
+
     let date = new Date();
-    let hours = String(date.getHours()).padStart(2, '0');
-    let minutes = String(date.getMinutes()).padStart(2, '0');
-    let seconds = String(date.getSeconds()).padStart(2, '0');
-    clock.textContent = `${hours}:${minutes}:${seconds}`;
+    clock.textContent = date.toLocaleTimeString(); // this method automatically adds leading zeros to single digit hours, minutes, and seconds based on the locale settings
 }, 1000); // after every 1000 milliseconds the function will be called and the time will be updated
